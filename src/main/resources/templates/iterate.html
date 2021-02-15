@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="https://www.thymeleaf.org ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Example of loop</title>
+</head>
+<body>
+    <h1>Traversing Element Name</h1>
+    <h1 th:text="${students}"></h1>
+    <ul>
+        <li th:each="n,status: ${students}">
+            <span th:text="${status.index}+' '+${n}"></span>
+        </li>
+    </ul>
+</body>
+</html>
